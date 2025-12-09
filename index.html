@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo de menú de navegación responsive con efectos modernos y galería de portafolio">
+    <title>Navegación Moderna | Ejercicio 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Añadir ícono para Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegación Principal -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">TechCorp</span>
+            </a>
+
+            <!-- Toggle para móvil (hamburguesa) -->
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- Menú de navegación -->
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#inicio" class="nav-link active">
+                        <i class="fas fa-home nav-icon"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#servicios" class="nav-link">
+                        <i class="fas fa-cogs nav-icon"></i>
+                        <span>Servicios</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portafolio" class="nav-link">
+                        <i class="fas fa-briefcase nav-icon"></i>
+                        <span>Portafolio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#equipo" class="nav-link">
+                        <i class="fas fa-users nav-icon"></i>
+                        <span>Equipo</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">
+                        <i class="fas fa-blog nav-icon"></i>
+                        <span>Blog</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacto" class="nav-link btn-cta">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contactar</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Indicador de scroll -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+
+    <!-- Contenido de ejemplo para demostrar scroll -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>Navegación Moderna y Responsive</h1>
+            <p>Este menú demuestra el uso de pseudo-clases CSS y diseño responsive.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3><i class="fas fa-mouse-pointer"></i> Efectos Hover</h3>
+                    <p>Los enlaces cambian de color al pasar el mouse con transiciones suaves.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-check-circle"></i> Estado Activo</h3>
+                    <p>El enlace actual tiene un estilo diferente para indicar la página actual.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-mobile-alt"></i> Responsive</h3>
+                    <p>El menú se adapta a dispositivos móviles con un botón hamburguesa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section class="content-section" id="servicios">
+        <div class="container">
+            <h2>Sección de Servicios</h2>
+            <p>Contenido de ejemplo para demostrar la navegación. Desplázate hacia abajo para ver más secciones.</p>
+            <!-- Recuadros de imágenes: Servicios -->
+            <div class="image-box-grid">
+                <div class="image-box">
+                    <img src="https://picsum.photos/seed/serv1/600/450" alt="Servicio 1" loading="lazy">
+                    <div class="image-caption">Servicio 1</div>
+                </div>
+                <div class="image-box">
+                    <img src="https://picsum.photos/seed/serv2/600/450" alt="Servicio 2" loading="lazy">
+                    <div class="image-caption">Servicio 2</div>
+                </div>
+                <div class="image-box">
+                    <img src="https://picsum.photos/seed/serv3/600/450" alt="Servicio 3" loading="lazy">
+                    <div class="image-caption">Servicio 3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Portafolio CON GALERÍA DE IMÁGENES AMPLIADA -->
+    <section class="content-section portfolio-section" id="portafolio">
+        <div class="container">
+            <h2>Nuestro Portafolio</h2>
+            <p class="section-description">Explora nuestros proyectos destacados y trabajos recientes.</p>
+            
+            <!-- Filtros de categorías -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Móvil</button>
+                <button class="filter-btn" data-filter="design">Diseño</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+            </div>
+            
+            <!-- Galería de imágenes AMPLIADA -->
+            <div class="portfolio-grid">
+                <!-- Proyecto 1 - Web -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Desarrollo Web E-commerce" 
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Tienda Online</h3>
+                            <p>Plataforma de comercio electrónico completa con carrito de compras</p>
+                            <a href="#" class="portfolio-link">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 - Móvil -->
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Aplicación Móvil Fitness" 
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>App de Fitness</h3>
+                            <p>Aplicación para seguimiento de ejercicio y nutrición</p>
+                            <a href="#" class="portfolio-link">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 3 - Diseño -->
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Diseño de Dashboard" 
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Dashboard Analytics</h3>
+                            <p>Interfaz de usuario para análisis de datos en tiempo real</p>
+                            <a href="#" class="portfolio-link">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 4 - Web -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Sistema de Gestión CRM" 
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Sistema CRM</h3>
+                            <p>Plataforma de gestión de relaciones con clientes</p>
+                            <a href="#" class="portfolio-link">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 5 - Móvil -->
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Aplicación de Delivery" 
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Delivery App</h3>
+                            <p>Aplicación de entrega de comida a domicilio</p>
+                            <a href="#" class="portfolio-link">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 6 - Branding -->
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Branding Corporativo" 
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Identidad Corporativa</h3>
+                            <p>Rediseño completo de identidad visual empresarial</p>
+                            <a href="#" class="portfolio-link">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 7 - Diseño -->
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Diseño de App Móvil" 
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>UI/UX App Banking</h3>
+                            <p>Diseño de interfaz para aplicación bancaria móvil</p>
+                            <a href="#" class="portfolio-link">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 8 - Web -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Portal Educativo" 
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Portal Educativo</h3>
+                            <p>Plataforma de aprendizaje en línea con cursos interactivos</p>
+                            <a href="#" class="portfolio-link">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 9 - Branding -->
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Diseño de Packaging" 
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Packaging Design</h3>
+                            <p>Diseño de empaques para productos de consumo</p>
+                            <a href="#" class="portfolio-link">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 10 - Móvil -->
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="App de Viajes" 
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Travel App</h3>
+                            <p>Aplicación para planificación de viajes y reservas</p>
+                            <a href="#" class="portfolio-link">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 11 - Web -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Dashboard Financiero" 
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Fintech Dashboard</h3>
+                            <p>Panel de control para gestión financiera empresarial</p>
+                            <a href="#" class="portfolio-link">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 12 - Branding -->
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Rediseño de Logo" 
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <h3>Rediseño de Marca</h3>
+                            <p>Modernización de identidad visual para startup tecnológica</p>
+                            <a href="#" class="portfolio-link">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contador de proyectos -->
+            <div class="portfolio-stats">
+                <div class="stat-item">
+                    <h3 id="project-count">12+</h3>
+                    <p>Proyectos Completados</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5</h3>
+                    <p>Categorías</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Clientes Satisfechos</p>
+                </div>
+            </div>
+            
+            <!-- Instrucciones para agregar más imágenes -->
+            <div class="portfolio-upload-info">
+                <h3><i class="fas fa-plus-circle"></i> ¿Cómo agregar tus propias imágenes?</h3>
+                <p>Para añadir tus propias imágenes a la galería, sigue estos sencillos pasos:</p>
+                
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Prepara tus imágenes</h4>
+                            <p>Optimiza tus imágenes (recomendado: 600x450px, formato JPG o PNG)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Copia la estructura HTML</h4>
+                            <p>Duplica uno de los bloques <code>.portfolio-item</code> existentes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Reemplaza la URL</h4>
+                            <p>Cambia el atributo <code>src</code> por la ruta de tu imagen</p>
+                            <pre><code>&lt;img src="mis-imagenes/mi-proyecto.jpg" alt="Descripción"&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Actualiza la categoría</h4>
+                            <p>Cambia el atributo <code>data-category</code> a: web, mobile, design o branding</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="image-sources">
+                    <h4><i class="fas fa-lightbulb"></i> Fuentes recomendadas para imágenes:</h4>
+                    <ul>
+                        <li><a href="https://unsplash.com" target="_blank">Unsplash</a> - Imágenes gratis de alta calidad</li>
+                        <li><a href="https://pixabay.com" target="_blank">Pixabay</a> - Fotos, vectores e ilustraciones gratuitas</li>
+                        <li><a href="https://pexels.com" target="_blank">Pexels</a> - Biblioteca de fotos gratuitas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección del Equipo -->
+    <section class="content-section" id="equipo">
+        <div class="container">
+            <h2>Sección del Equipo</h2>
+            <p>Información sobre el equipo de trabajo.</p>
+            <!-- Recuadros de imágenes: Equipo -->
+            <div class="image-box-grid">
+                <div class="image-box">
+                    <img src="https://picsum.photos/seed/team1/600/450" alt="Miembro 1" loading="lazy">
+                    <div class="image-caption">Miembro 1</div>
+                </div>
+                <div class="image-box">
+                    <img src="https://picsum.photos/seed/team2/600/450" alt="Miembro 2" loading="lazy">
+                    <div class="image-caption">Miembro 2</div>
+                </div>
+                <div class="image-box">
+                    <img src="https://picsum.photos/seed/team3/600/450" alt="Miembro 3" loading="lazy">
+                    <div class="image-caption">Miembro 3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección del Blog -->
+    <section class="content-section" id="blog">
+        <div class="container">
+            <h2>Sección del Blog</h2>
+            <p>Artículos y noticias recientes.</p>
+            <!-- Recuadros de imágenes: Blog -->
+            <div class="image-box-grid">
+                <div class="image-box">
+                    <img src="https://picsum.photos/seed/blog1/600/450" alt="Artículo 1" loading="lazy">
+                    <div class="image-caption">Artículo 1</div>
+                </div>
+                <div class="image-box">
+                    <img src="https://picsum.photos/seed/blog2/600/450" alt="Artículo 2" loading="lazy">
+                    <div class="image-caption">Artículo 2</div>
+                </div>
+                <div class="image-box">
+                    <img src="https://picsum.photos/seed/blog3/600/450" alt="Artículo 3" loading="lazy">
+                    <div class="image-caption">Artículo 3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="content-section" id="contacto">
+        <div class="container">
+            <h2>Sección de Contacto</h2>
+            <p>Formulario de contacto y datos.</p>
+            <!-- Recuadros de imágenes: Contacto (ejemplos / oficinas) -->
+            <div class="image-box-grid">
+                <div class="image-box">
+                    <img src="https://picsum.photos/seed/contact1/600/450" alt="Oficina 1" loading="lazy">
+                    <div class="image-caption">Oficina 1</div>
+                </div>
+                <div class="image-box">
+                    <img src="https://picsum.photos/seed/contact2/600/450" alt="Oficina 2" loading="lazy">
+                    <div class="image-caption">Oficina 2</div>
+                </div>
+                <div class="image-box">
+                    <img src="https://picsum.photos/seed/contact3/600/450" alt="Ubicación" loading="lazy">
+                    <div class="image-caption">Ubicación</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TechCorp. Ejercicio de navegación responsive.</p>
+        </div>
+    </footer>
+
+    <!-- Botón para volver arriba -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript para el menú hamburguesa -->
+    <script src="script.js"></script>
+</body>
+</html>
